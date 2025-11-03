@@ -8,8 +8,7 @@ Abrir Pagina Home FuelWise
     Maximize Browser Window
     Capture Page Screenshot    printsNikolas/pagina_home_aberta.png
 
-<<<<<<< HEAD:KeyWords_Form.robot
-=======
+
 Fazer Login
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
     Click Element                   ${BUTTON_MENU}
@@ -36,7 +35,6 @@ Fazer Login Senha Invalida
     Input Text                      ${EMAIL_FIELD}                  joaopedro@gmail.com
     Input Text                      ${PASSWORD_FIELD}               _invalida
     Capture Page Screenshot         printsNikolas/login_senha_invalida.png
->>>>>>> dc3f8b6d696587e18999e17eb481d34c8898bfed:Nikolas/KeyWords_Form.robot
 
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
