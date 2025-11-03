@@ -8,32 +8,6 @@ Abrir Pagina Home FuelWise
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_home_aberta.png
 
-Fazer Login
-    Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
-    Click Element                   ${BUTTON_MENU}
-    Wait Until Element Is Visible   ${LOGIN_TRANSPORTADORA}         timeout=10s
-    Click Element                   ${LOGIN_TRANSPORTADORA}
-    Input Text                      ${EMAIL_FIELD}                  joaopedro@gmail.com
-    Input Text                      ${PASSWORD_FIELD}               _123456789
-    Capture Page Screenshot         prints/login_preenchido.png
-
-Fazer Login Inexistente
-    Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
-    Click Element                   ${BUTTON_MENU}
-    Wait Until Element Is Visible   ${LOGIN_TRANSPORTADORA}         timeout=10s
-    Click Element                   ${LOGIN_TRANSPORTADORA}
-    Input Text                      ${EMAIL_FIELD}                  inexistente@gmail.com
-    Input Text                      ${PASSWORD_FIELD}               _123456789
-    Capture Page Screenshot         prints/login_inexistente.png
-
-Fazer Login Senha Invalida
-    Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
-    Click Element                   ${BUTTON_MENU}
-    Wait Until Element Is Visible   ${LOGIN_TRANSPORTADORA}         timeout=10s
-    Click Element                   ${LOGIN_TRANSPORTADORA}
-    Input Text                      ${EMAIL_FIELD}                  joaopedro@gmail.com
-    Input Text                      ${PASSWORD_FIELD}               _invalida
-    Capture Page Screenshot         prints/login_senha_invalida.png
 
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
