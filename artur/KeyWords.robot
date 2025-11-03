@@ -2,7 +2,7 @@
 Resource    Variaveis.robot
 Library     SeleniumLibrary
 
-*** Test Cases ***
+*** Keywords ***
 Abrir Pagina Home FuelWise
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -22,6 +22,21 @@ Abrir Pagina Solicitacao
     Open Browser    ${URL_SOLICITACAO}    chrome
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_solitacao.png
+
+Fazer Login
+    Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
+    Click Element                   ${BUTTON_MENU}
+    Wait Until Element Is Visible   ${LOGIN_TRANSPORTADORA}         timeout=10s
+    Click Element                   ${LOGIN_TRANSPORTADORA}
+    Input Text                      ${EMAIL_FIELD}                  arturarrs@gmail.com
+    Input Text                      ${PASSWORD_FIELD}               Artur123?
+    Capture Page Screenshot         prints/login_preenchido.png
+
+Fazer Logout
+    Open Browser    ${URL}    chrome
+    Go to    ${URL_LOGOUT}    
+    Maximize Browser Window
+    Capture Page Screenshot    prints/pagina_logout.png  
 
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s

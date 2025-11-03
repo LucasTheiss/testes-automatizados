@@ -3,6 +3,8 @@ ${URL_HOME}                     http://localhost/FuelWise/pages/
 ${URL_VEICULOS}                 http://localhost/FuelWise/pages/gerente/veiculos.php?idtransportadora=1
 ${URL_VIAGEM}                   http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1
 ${URL_SOLICITACAO}              http://localhost/FuelWise/pages/adm/solicitacoes.php
+${URL_LOGOUT}                   http://localhost/FuelWise/pages/logout.php
+
 ${BUTTON_MENU}                  id:menu-icon
 ${CAD_TRANSPORTADORA}           xpath=//a[contains(text(), 'Transportadora')]
 ${NAMEENTERPRISE_FIELD}         name:nomeEmpresa
@@ -14,6 +16,10 @@ ${VEICULOS_BUTTON}              xpath=//button[text()='Adicionar novo veículo']
 ${APROVAR_BUTTON}               xpath=//button[text()='Aprovar']
 ${SIM_BUTTON}                   xpath=//button[text()='Sim tenho certeza']
 
+${LOGIN_TRANSPORTADORA}         xpath=//a[contains(text(), 'Fazer login')]
+${LOGIN_BUTTON}                 xpath=//button[text()='Entrar']
+${EMAIL_FIELD}                  name:email
+${PASSWORD_FIELD}               name:senha
 
 ${VEICULO_FIELD}                name:veiculo
 ${PLACA_FIELD}                  name:placa

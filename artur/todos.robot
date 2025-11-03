@@ -1,7 +1,7 @@
 *** Settings ***
 Resource  KeyWords.robot
 
-*** Keywords ***
+*** Test Cases ***
 Cadastro vazio
     Abrir Pagina Home FuelWise
     Realizar o cadastro
@@ -9,19 +9,21 @@ Cadastro vazio
     Verificar Texto de Campo Obrigatorio
     Fechar o navegador  
 
+Cadastro Veiculo Invalido
+    Abrir Pagina Home FuelWise
+    Fazer Login
+    Abrir Pagina Veiculos
+    Preencher Infos Veiculos Incorreta
+    Clicar Salvar
+    Verificar Veiculo
+    Fechar o navegador
+
 Cadastro Veiculo
     Abrir Pagina Veiculos
     Preencher Infos Veiculos Correta
     Clicar Salvar
     Verificar Veiculo
     Fechar o navegador  
-
-Cadastro Veiculo Invalido
-    Abrir Pagina Veiculos
-    Preencher Infos Veiculos Correta
-    Clicar Salvar
-    Verificar Veiculo
-    Fechar o navegador
 
 Cadastro Viagem
     Abrir Pagina Viagem
@@ -31,10 +33,11 @@ Cadastro Viagem
     Fechar o navegador
 
 Aprovar Solicitacao
-    Abrir Abrir Solicitacao
+    Fazer Logout
+    Abrir Pagina Solicitacao
     Clicar Aprovar
     Verificar Aprovar
     Clicar Sim
     Verificar Sim
-    Verificar resultado do cadastro com cnpj repetido
+    Verificar Texto de Campo Obrigatorio
     Fechar o navegador
