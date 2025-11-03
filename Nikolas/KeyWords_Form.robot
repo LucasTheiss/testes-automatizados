@@ -6,7 +6,7 @@ Library     SeleniumLibrary
 Abrir Pagina Home FuelWise
     Open Browser    ${URL}    chrome
     Maximize Browser Window
-    Capture Page Screenshot    prints/pagina_home_aberta.png
+    Capture Page Screenshot    printsNikolas/pagina_home_aberta.png
 
 Fazer Login
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -15,7 +15,7 @@ Fazer Login
     Click Element                   ${LOGIN_TRANSPORTADORA}
     Input Text                      ${EMAIL_FIELD}                  joaopedro@gmail.com
     Input Text                      ${PASSWORD_FIELD}               _123456789
-    Capture Page Screenshot         prints/login_preenchido.png
+    Capture Page Screenshot         printsNikolas/login_preenchido.png
 
 Fazer Login Inexistente
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -24,7 +24,7 @@ Fazer Login Inexistente
     Click Element                   ${LOGIN_TRANSPORTADORA}
     Input Text                      ${EMAIL_FIELD}                  inexistente@gmail.com
     Input Text                      ${PASSWORD_FIELD}               _123456789
-    Capture Page Screenshot         prints/login_inexistente.png
+    Capture Page Screenshot         printsNikolas/login_inexistente.png
 
 Fazer Login Senha Invalida
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -33,7 +33,7 @@ Fazer Login Senha Invalida
     Click Element                   ${LOGIN_TRANSPORTADORA}
     Input Text                      ${EMAIL_FIELD}                  joaopedro@gmail.com
     Input Text                      ${PASSWORD_FIELD}               _invalida
-    Capture Page Screenshot         prints/login_senha_invalida.png
+    Capture Page Screenshot         printsNikolas/login_senha_invalida.png
 
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -46,8 +46,8 @@ Preencher Infos da Empresa
     Input Text                      ${CITY_FIELD}                   Arapixuna
     Input Text                      ${STATE_FIELD}                  PR
     Input Text                      ${PHONE_FIELD}                  41563265789
-    Input Text                      ${CNPJ_FIELD}                   43.350.131/0001-01
-    Capture Page Screenshot         prints/empresa_preenchida.png
+    Input Text                      ${CNPJ_FIELD}                   26.860.065/0001-09
+    Capture Page Screenshot         printsNikolas/empresa_preenchida.png
 
 Preencher Infos Pessoais
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -58,7 +58,7 @@ Preencher Infos Pessoais
     Input Text                      ${PASSWORD_FIELD}               _123456789      
     Input Text                      ${CONFIRM_PASSWORD_FIELD}       _123456789 
     Input Text                      ${TEL_NUMBER_FIELD}             41895471234
-    Capture Page Screenshot         prints/infos_pessoais.png
+    Capture Page Screenshot         printsNikolas/infos_pessoais.png
 
 Preencher Infos da Empresa Sem Nome da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -72,46 +72,46 @@ Preencher Infos da Empresa Sem Nome da Empresa
     Input Text                      ${STATE_FIELD}                  PR
     Input Text                      ${PHONE_FIELD}                  777777
     Input Text                      ${CNPJ_FIELD}                   7777888
-    Capture Page Screenshot         prints/empresa_sem_nome.png
+    Capture Page Screenshot         printsNikolas/empresa_sem_nome.png
 
 Clicar Entrar
     Click Element                   ${LOGIN_BUTTON} 
-    Capture Page Screenshot         prints/clicou_entrar.png
+    Capture Page Screenshot         printsNikolas/clicou_entrar.png
 
 Clicar Continuar
     Click Element                   ${CONTINUE_BUTTON} 
-    Capture Page Screenshot         prints/clicou_continuar.png
+    Capture Page Screenshot         printsNikolas/clicou_continuar.png
 
 Clicar Enviar Cadastro
     Click Element                   ${CAD_BUTTON} 
-    Capture Page Screenshot         prints/clicou_enviar.png
+    Capture Page Screenshot         printsNikolas/clicou_enviar.png
 
 Verificar Texto de Campo Obrigatorio
     Wait Until Page Contains        ${ERRO_TEXT}                    timeout=5s
     Page Should Contain             ${ERRO_TEXT}
-    Capture Page Screenshot         prints/campo_obrigatorio.png
+    Capture Page Screenshot         printsNikolas/campo_obrigatorio.png
 
 Verificar CPF ja Cadastrado
     Wait Until Page Contains        ${ERRO_TEXT_CPF}                timeout=5s
     Page Should Contain             ${ERRO_TEXT_CPF} 
-    Capture Page Screenshot         prints/cpf_repetido.png
+    Capture Page Screenshot         printsNikolas/cpf_repetido.png
 
 Verificar Texto de Login
     Wait Until Page Contains        ${NAME_TEXT}                    timeout=5s
     Page Should Contain             ${NAME_TEXT}
-    Capture Page Screenshot         prints/login_sucesso.png
+    Capture Page Screenshot         printsNikolas/login_sucesso.png
 
 Verificar Texto de Usuario Não Encontrado
     Wait Until Page Contains        ${ERRO_TEXT_USER}               timeout=5s
     Page Should Contain             ${ERRO_TEXT_USER}
-    Capture Page Screenshot         prints/usuario_nao_encontrado.png
+    Capture Page Screenshot         printsNikolas/usuario_nao_encontrado.png
 
 Verificar Texto de Senha Invalida
     Wait Until Page Contains        ${ERRO_TEXT_SENHA}              timeout=5s
     Page Should Contain             ${ERRO_TEXT_SENHA}
-    Capture Page Screenshot         prints/senha_invalida.png
+    Capture Page Screenshot         printsNikolas/senha_invalida.png
 
 Fechar Navegador
-    Capture Page Screenshot         prints/final_teste.png
+    Capture Page Screenshot         printsNikolas/final_teste.png
     Close Browser
 
