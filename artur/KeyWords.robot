@@ -8,6 +8,21 @@ Abrir Pagina Home FuelWise
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_home_aberta.png
 
+Abrir Pagina Integrantes
+    Open Browser    ${URL_VIAGENS}    chrome
+    Maximize Browser Window
+    Capture Page Screenshot    prints/pagina_home_aberta.png
+
+Abrir Pagina Veiculos
+    Open Browser    ${URL_VEICULOS}    chrome
+    Maximize Browser Window
+    Capture Page Screenshot    prints/pagina_home_aberta.png
+
+Abrir Pagina Solicitacao
+    Open Browser    ${URL_SOLICITACAO}    chrome
+    Maximize Browser Window
+    Capture Page Screenshot    prints/pagina_home_aberta.png
+
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
     Click Element                   ${BUTTON_MENU}

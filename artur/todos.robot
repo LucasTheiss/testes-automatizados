@@ -3,35 +3,35 @@ Resource  KeyWords.robot
 
 *** Keywords ***
 Cadastro vazio
-    Abrir o navegador
+    Abrir Pagina Home FuelWise
     Realizar o cadastro
     Clicar Continuar
     Verificar Texto de Campo Obrigatorio
     Fechar o navegador  
 
 Cadastro Veiculo
-    Abrir o navegador
+    Abrir Pagina Veiculos
     Preencher Infos Veiculos Correta
     Clicar Salvar
     Verificar Veiculo
     Fechar o navegador  
 
 Cadastro Veiculo Invalido
-    Abrir o navegador
+    Abrir Pagina Veiculos
     Preencher Infos Veiculos Correta
     Clicar Salvar
     Verificar Veiculo
     Fechar o navegador
 
 Cadastro Viagem
-    Abrir o navegador
+    Abrir Pagina Viagem
     Preencher Infos Viagem
     Clicar Salvar
     Verificar viagem
     Fechar o navegador
 
 Aprovar Solicitacao
-    Abrir o navegador
+    Abrir Abrir Solicitacao
     Clicar Aprovar
     Verificar Aprovar
     Clicar Sim

@@ -2,7 +2,7 @@
 Resource  KeyWords.robot
 
 *** Keywords ***
-Abrir o navegador
+Abrir Pagina Home FuelWise
 Realizar o cadastro
 Clicar Continuar
 Verificar Texto de Campo Obrigatorio

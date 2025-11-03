@@ -2,7 +2,7 @@
 Resource  KeyWords.robot
 
 *** Keywords ***
-Abrir o navegador
+Abrir Pagina Veiculos
 Preencher Infos Veiculos Correta
 Clicar Salvar
 Verificar Veiculo

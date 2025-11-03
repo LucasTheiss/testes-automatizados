@@ -1,5 +1,8 @@
 *** Variables ***
-${URL}                          http://localhost/FuelWise/pages/
+${URL_HOME}                     http://localhost/FuelWise/pages/
+${URL_VEICULOS}                 http://localhost/FuelWise/pages/gerente/veiculos.php?idtransportadora=1
+${URL_VIAGEM}                   http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1
+${URL_SOLICITACAO}              http://localhost/FuelWise/pages/adm/solicitacoes.php
 ${BUTTON_MENU}                  id:menu-icon
 ${CAD_TRANSPORTADORA}           xpath=//a[contains(text(), 'Transportadora')]
 ${NAMEENTERPRISE_FIELD}         name:nomeEmpresa

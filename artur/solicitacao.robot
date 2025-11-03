@@ -9,7 +9,7 @@ ${SIM}      xpath=//a[contains(text(), 'Sim tenho certeza')]
 ${RESULTADO}        Falha ao aprovar nova transportadora
 
 *** Keywords ***
-Abrir o navegador
+Abrir Pagina Solicitacao
 Clicar Aprovar
 Verificar Aprovar
 Clicar Sim
