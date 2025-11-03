@@ -1,6 +1,8 @@
 *** Settings ***
 Resource    KeyWords_Form.robot
 
+# ANTES DE EXECUTAR robot "Nikolas\Caso_Todos.robot" EXECUTE PRIMEIRO robot "Nikolas\CadastroCorreto.robot"
+
 
 *** Test Cases ***
 Cadastro utilizando um CPF que já está cadastrado no sistema  #Caso 33 "Cadastro utilizando um CPF que já está cadastrado no sistema."
