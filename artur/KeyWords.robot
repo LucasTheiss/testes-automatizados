@@ -2,7 +2,7 @@
 Resource    Variaveis.robot
 Library     SeleniumLibrary
 
-*** Keywords ***
+*** Test Cases ***
 Abrir Pagina Home FuelWise
     Open Browser    ${URL}    chrome
     Maximize Browser Window
@@ -11,17 +11,17 @@ Abrir Pagina Home FuelWise
 Abrir Pagina Integrantes
     Open Browser    ${URL_VIAGENS}    chrome
     Maximize Browser Window
-    Capture Page Screenshot    prints/pagina_home_aberta.png
+    Capture Page Screenshot    prints/pagina_integrantes.png
 
 Abrir Pagina Veiculos
     Open Browser    ${URL_VEICULOS}    chrome
     Maximize Browser Window
-    Capture Page Screenshot    prints/pagina_home_aberta.png
+    Capture Page Screenshot    prints/pagina_veiculos.png
 
 Abrir Pagina Solicitacao
     Open Browser    ${URL_SOLICITACAO}    chrome
     Maximize Browser Window
-    Capture Page Screenshot    prints/pagina_home_aberta.png
+    Capture Page Screenshot    prints/pagina_solitacao.png
 
 Preencher Infos da Empresa
     Wait Until Element Is Visible   ${BUTTON_MENU}                  10s
@@ -101,3 +101,7 @@ Clicar Sim
 Clicar Aprovar
     Click Element                   ${APROVAR_BUTTON} 
     Capture Page Screenshot         prints/clicou_aprovar.png
+
+Fechar Navegador
+    Capture Page Screenshot         prints/final_teste.png
+    Close Browser
