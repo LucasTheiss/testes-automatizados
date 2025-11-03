@@ -16,11 +16,14 @@ Abrir o navegador
 
 Realizar o cadastro
     Input Text  ${CAMPO_EMPRESA}  ${TERMO_EMPRESA}
+    Capture Page Screenshot         prints/cadastro.png
     Click Button  ${CONTINUAR}  
+    Capture Page Screenshot         prints/continuar.png
     Wait Until Page Contains Element  id=nav-mobile
 
 Verificar resultado do cadastro
     Page Should Contain  ${RESULTADO}
+    Capture Page Screenshot         prints/resultado.png
 
 Fechar o navegador
     Capture Page Screenshot 

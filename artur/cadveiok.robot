@@ -23,15 +23,19 @@ Abrir o navegador
 
 Realizar o cadastro de veiculo 
     Click Button  ${BTN} 
+    Capture Page Screenshot         prints/clicou_adicionar.png
     Input Text  ${CAMPO_PLACA}  ${TERMO_PLACA}
     Input Text  ${CAMPO_MODELO}  ${TERMO_MODELO}
     Input Text  ${CAMPO_EIXOS}  ${TERMO_EIXOS}
     Input Text  ${CAMPO_LITRAGEM}  ${TERMO_LITRAGEM}
+    Capture Page Screenshot         prints/preencheu_veiculo.png
     Click Button  ${SALVAR}  
+    Capture Page Screenshot         prints/clicou_salvar.png
     Wait Until Page Contains Element  id=nav-mobile
 
 Verificar resultado do cadastro
     Page Should Contain  ${RESULTADO}
+    Capture Page Screenshot         prints/resultado.png
 
 Fechar o navegador
     Capture Page Screenshot 

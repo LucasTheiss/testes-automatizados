@@ -36,11 +36,14 @@ Realizar o cadastro da viagem
     Input Text  ${CAMPO_CORO}  ${TERMO_CORO}
     Input Text  ${CAMPO_DESTINO}  ${TERMO_DESTINO}
     Input Text  ${CAMPO_CORD}  ${TERMO_CORD}
+    Capture Page Screenshot         prints/preencheu_campos.png
     Click Button  ${SALVAR}  
+    Capture Page Screenshot         prints/clicou_salvar.png
     Wait Until Page Contains Element  id=nav-mobile
 
 Verificar resultado da viagem
     Page Should Contain  ${RESULTADO}
+    Capture Page Screenshot         prints/resultado.png
 
 Fechar o navegador
     Capture Page Screenshot 
