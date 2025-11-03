@@ -1,0 +1,39 @@
+* Settings *
+Library  SeleniumLibrary
+
+*** Variables ***
+${URL}      http://localhost/FuelWise/pages/gerente/veiculos.php?idtransportadora=1
+${BROWSER}      Chrome
+${BTN}      xpath=//button[text()='Adicionar novo integrante']
+${CAMPO_PLACA}      id:placa
+${TERMO_PLACA}      ayl7689
+${CAMPO_MODELO}     id:modelo
+${TERMO_MODELO}     Mercedes
+${CAMPO_EIXOS}      id:eixos
+${TERMO_EIXOS}      4
+${CAMPO_LITRAGEM}       id:litragem
+${TERMO_LITRAGEM}       1500
+${SALVAR}       xpath=//button[text()='Salvar']
+${RESULTADO}        Veículo cadastrado com sucesso
+
+*** Keywords ***
+Abrir o navegador
+    Open Browser  ${URL}  ${BROWSER}
+    Maximize Browser Window
+
+Realizar o cadastro de veiculo 
+    Click Button  ${BTN} 
+    Input Text  ${CAMPO_PLACA}  ${TERMO_PLACA}
+    Input Text  ${CAMPO_MODELO}  ${TERMO_MODELO}
+    Input Text  ${CAMPO_EIXOS}  ${TERMO_EIXOS}
+    Input Text  ${CAMPO_LITRAGEM}  ${TERMO_LITRAGEM}
+    Click Button  ${SALVAR}  
+    Wait Until Page Contains Element  id=nav-mobile
+
+Verificar resultado do cadastro
+    Page Should Contain  ${RESULTADO}
+
+Fechar o navegador
+    Capture Page Screenshot 
+    Close Browser
+    
