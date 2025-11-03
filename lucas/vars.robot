@@ -1,6 +1,6 @@
 *** Variables ***
 ${URL_LOGIN}        http://localhost/FuelWise/pages/login.php
-${URL_VIAGENS}        http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=3
+${URL_VIAGENS}        http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1
 ${RESULTADO_LOGIN_BRANCO}    Campo obrigatório.
 ${RESULTADO_LOGIN_EMAIL_INVALIDO}    Usuário não encontrado.
 ${NOME_FUNCIONARIO}    João Silva
