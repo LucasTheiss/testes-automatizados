@@ -5,7 +5,6 @@ Resource  KeyWords.robot
 Cadastro vazio
     Abrir Pagina Home FuelWise
     Realizar o cadastro
-    Clicar Continuar
     Verificar Texto de Campo Obrigatorio
     Fechar o navegador  
 
@@ -15,10 +14,12 @@ Cadastro Veiculo Invalido
     Abrir Pagina Veiculos
     Preencher Infos Veiculos Incorreta
     Clicar Salvar
-    Verificar Veiculo
+    Verificar Veiculo Incorreto
     Fechar o navegador
 
 Cadastro Veiculo
+    Abrir Pagina Home FuelWise
+    Fazer Login
     Abrir Pagina Veiculos
     Preencher Infos Veiculos Correta
     Clicar Salvar
@@ -26,6 +27,8 @@ Cadastro Veiculo
     Fechar o navegador  
 
 Cadastro Viagem
+    Abrir Pagina Home FuelWise
+    Fazer Login
     Abrir Pagina Viagem
     Preencher Infos Viagem
     Clicar Salvar
@@ -33,11 +36,11 @@ Cadastro Viagem
     Fechar o navegador
 
 Aprovar Solicitacao
-    Fazer Logout
+    Abrir Pagina Home FuelWise
+    Go To   http://localhost/FuelWise/pages/adm/admRole.php
     Abrir Pagina Solicitacao
     Clicar Aprovar
     Verificar Aprovar
     Clicar Sim
-    Verificar Sim
-    Verificar Texto de Campo Obrigatorio
+    Verificar Texto de Campo Obrigatorio Solicitacao
     Fechar o navegador

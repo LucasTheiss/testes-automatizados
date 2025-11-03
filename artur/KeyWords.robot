@@ -4,7 +4,7 @@ Library     SeleniumLibrary
 
 *** Keywords ***
 Abrir Pagina Home FuelWise
-    Open Browser    ${URL}    chrome
+    Open Browser    ${URL_HOME}    chrome
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_home_aberta.png
 
@@ -14,12 +14,16 @@ Abrir Pagina Integrantes
     Capture Page Screenshot    prints/pagina_integrantes.png
 
 Abrir Pagina Veiculos
-    Open Browser    ${URL_VEICULOS}    chrome
+    Go To    ${URL_VEICULOS}    
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_veiculos.png
 
 Abrir Pagina Solicitacao
-    Open Browser    ${URL_SOLICITACAO}    chrome
+    Go TO    ${URL_SOLICITACAO}
+    Maximize Browser Window
+    Capture Page Screenshot    prints/pagina_solitacao.png
+Abrir Pagina Viagem
+    Go To    ${URL_VIAGENS}
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_solitacao.png
 
@@ -28,12 +32,13 @@ Fazer Login
     Click Element                   ${BUTTON_MENU}
     Wait Until Element Is Visible   ${LOGIN_TRANSPORTADORA}         timeout=10s
     Click Element                   ${LOGIN_TRANSPORTADORA}
-    Input Text                      ${EMAIL_FIELD}                  arturarrs@gmail.com
-    Input Text                      ${PASSWORD_FIELD}               Artur123?
+    Input Text                      ${EMAIL_FIELD}                  lucas1@gmail.com
+    Input Text                      ${PASSWORD_FIELD}               123123123$
+    Click Element    ${LOGIN_BUTTON}
     Capture Page Screenshot         prints/login_preenchido.png
 
 Fazer Logout
-    Open Browser    ${URL}    chrome
+    Open Browser    ${URL_HOME}    chrome
     Go to    ${URL_LOGOUT}    
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_logout.png  
@@ -51,22 +56,22 @@ Preencher Infos Veiculos Correta
     Click Element                   ${VEICULOS_BUTTON}
     Input Text                      ${VEICULO_FIELD}                Mercedes
     Input Text                      ${PLACA_FIELD}                  ayl7689     
+    Input Text                      ${LITRAGEM_FIELD}                  100     
     Input Text                      ${EIXOS_FIELD}                  4        
-    Capture Page Screenshot         prints/infos_vwiculos_correta.png
+    Capture Page Screenshot         prints/infos_veiculos_correta.png
 
 Preencher Infos Veiculos Incorreta
-    Wait Until Element Is Visible   ${VEICULOS_MENU}                10s
+    Wait Until Element Is Visible   ${VEICULOS_BUTTON}                10s
     Click Element                   ${VEICULOS_BUTTON}
     Input Text                      ${VEICULO_FIELD}                Mercedes
-    Input Text                      ${PLACA_FIELD}                  ayl7689     
+    Input Text                      ${PLACA_FIELD}                  $     
     Input Text                      ${EIXOS_FIELD}                  aaaa        
+    Input Text                      ${LITRAGEM_FIELD}                  100     
     Capture Page Screenshot         prints/infos_veiculos_incorreta.png
 
 Preencher Infos Viagem
     Wait Until Element Is Visible   ${VIAGEM_BUTTON}                10s
     Click Element                   ${VIAGEM_BUTTON}
-    Select From List By Label       id:idusuario                    daniel
-    Select From List By Label       :idveiculo                      ayl7689-Mercedes
     Input Text                      ${CARGA_FIELD}                  malte
     Input Text                      ${PESO_FIELD}                   120    
     Input Text                      ${OBS_FIELD}                    aaa
@@ -80,10 +85,18 @@ Verificar Texto de Campo Obrigatorio
     Wait Until Page Contains        ${ERRO_TEXT}                    timeout=5s
     Page Should Contain             ${ERRO_TEXT}
     Capture Page Screenshot         prints/campo_obrigatorio.png
+Verificar Texto de Campo Obrigatorio Solicitacao
+    Wait Until Page Contains        Solicitação aprovada com sucesso.                    timeout=5s
+    Page Should Contain             Solicitação aprovada com sucesso.
+    Capture Page Screenshot         prints/campo_obrigatorio.png
 
 Verificar Veiculo
     Wait Until Page Contains        ${VEICULO_TEXT}                    timeout=5s
     Page Should Contain             ${VEICULO_TEXT}
+    Capture Page Screenshot         prints/veiculo.png
+Verificar Veiculo Incorreto
+    Wait Until Page Contains        Placa inválida                    timeout=5s
+    Page Should Contain             Placa inválida
     Capture Page Screenshot         prints/veiculo.png
 
 Verificar Viagem
@@ -117,6 +130,14 @@ Clicar Aprovar
     Click Element                   ${APROVAR_BUTTON} 
     Capture Page Screenshot         prints/clicou_aprovar.png
 
-Fechar Navegador
+Fechar o Navegador
     Capture Page Screenshot         prints/final_teste.png
     Close Browser
+
+Realizar o cadastro
+    Go To   http://localhost/FuelWise/pages/cadastro_transportadora.php?page=1
+    Wait Until Page Contains    Cadastro da Empresa
+    Input Text                      name:telefoneEmpresa         1212345678
+    Wait Until Element Is Visible    xpath=//button[text()='Continuar para Informações Pessoais']
+    Scroll Element Into View    xpath=//button[text()='Continuar para Informações Pessoais']
+    Click Element    xpath=//button[text()='Continuar para Informações Pessoais']

@@ -1,7 +1,7 @@
 *** Variables ***
 ${URL_HOME}                     http://localhost/FuelWise/pages/
 ${URL_VEICULOS}                 http://localhost/FuelWise/pages/gerente/veiculos.php?idtransportadora=1
-${URL_VIAGEM}                   http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1
+${URL_VIAGENS}                  http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1
 ${URL_SOLICITACAO}              http://localhost/FuelWise/pages/adm/solicitacoes.php
 ${URL_LOGOUT}                   http://localhost/FuelWise/pages/logout.php
 
@@ -13,15 +13,15 @@ ${ERRO_TEXT}                    Campo obrigatório
 ${SAVE_BUTTON}                  xpath=//button[text()='Salvar']
 ${VIAGEM_BUTTON}                xpath=//button[text()='Adicionar nova viagem']
 ${VEICULOS_BUTTON}              xpath=//button[text()='Adicionar novo veículo']
-${APROVAR_BUTTON}               xpath=//button[text()='Aprovar']
-${SIM_BUTTON}                   xpath=//button[text()='Sim tenho certeza']
+${APROVAR_BUTTON}               css=.btn-icon.btn-approve
+${SIM_BUTTON}                   xpath=//button[text()='Sim, tenho certeza!']
 
 ${LOGIN_TRANSPORTADORA}         xpath=//a[contains(text(), 'Fazer login')]
 ${LOGIN_BUTTON}                 xpath=//button[text()='Entrar']
 ${EMAIL_FIELD}                  name:email
 ${PASSWORD_FIELD}               name:senha
 
-${VEICULO_FIELD}                name:veiculo
+${VEICULO_FIELD}                name:modelo
 ${PLACA_FIELD}                  name:placa
 ${EIXOS_FIELD}                  name:eixos
 ${LITRAGEM_FIELD}               name:litragem
