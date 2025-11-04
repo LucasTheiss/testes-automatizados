@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-11-03T21:33:43.778113" rpa="false" schemaversion="5">
+<suite id="s1" name="Suite Testes" source="C:\Users\Lucas Theiss\Downloads\TestesAutomatizados\lucas\suite_testes.robot">
+<test id="s1-t1" name="CT1 - Login com campos em branco" line="9">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:44.369454" level="INFO">Opening browser 'chrome' to base url 'http://localhost/FuelWise/pages/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:33:44.369454" elapsed="2.075045"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T21:33:46.450261" elapsed="0.040794"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2025-11-03T21:33:44.364698" elapsed="2.126357"/>
+</kw>
+<kw name="Preencher campos login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:46.496949" level="INFO">Typing text '' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:46.496949" elapsed="0.177443"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:46.674392" level="INFO">Typing text '' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:46.674392" elapsed="0.155047"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:46.829439" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:46.829439" elapsed="0.117117"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:33:47.947029" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:33:46.946556" elapsed="1.000473"/>
+</kw>
+<arg>${EMPTY}</arg>
+<arg>${EMPTY}</arg>
+<status status="PASS" start="2025-11-03T21:33:46.491055" elapsed="1.455974"/>
+</kw>
+<kw name="Observar resultado" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${RESULTADO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-03T21:33:47.949070" elapsed="0.038792"/>
+</kw>
+<arg>${RESULTADO_LOGIN_BRANCO}</arg>
+<status status="PASS" start="2025-11-03T21:33:47.947029" elapsed="0.040833"/>
+</kw>
+<kw name="Fechar o navegador" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:48.106923" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-03T21:33:47.987862" elapsed="0.119061"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T21:33:48.106923" elapsed="2.260847"/>
+</kw>
+<status status="PASS" start="2025-11-03T21:33:47.987862" elapsed="2.379908"/>
+</kw>
+<doc>Tenta logar com campos em branco</doc>
+<status status="PASS" start="2025-11-03T21:33:44.364698" elapsed="6.003072"/>
+</test>
+<test id="s1-t2" name="CT2 - Login com email inválido" line="14">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:50.370904" level="INFO">Opening browser 'chrome' to base url 'http://localhost/FuelWise/pages/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:33:50.370904" elapsed="2.062202"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T21:33:52.434617" elapsed="0.045719"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2025-11-03T21:33:50.369369" elapsed="2.110967"/>
+</kw>
+<kw name="Preencher campos login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:52.484610" level="INFO">Typing text 'lucas' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:52.484610" elapsed="0.227731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:52.714422" level="INFO">Typing text '123123123$' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:52.714422" elapsed="0.108493"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:52.824427" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:52.822915" elapsed="0.153484"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:33:53.976939" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:33:52.976399" elapsed="1.000540"/>
+</kw>
+<arg>lucas</arg>
+<arg>123123123$</arg>
+<status status="PASS" start="2025-11-03T21:33:52.480336" elapsed="1.496603"/>
+</kw>
+<kw name="Observar resultado" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${RESULTADO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-03T21:33:53.976939" elapsed="0.017690"/>
+</kw>
+<arg>${RESULTADO_LOGIN_EMAIL_INVALIDO}</arg>
+<status status="PASS" start="2025-11-03T21:33:53.976939" elapsed="0.017690"/>
+</kw>
+<kw name="Fechar o navegador" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:54.084704" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-03T21:33:53.994629" elapsed="0.090075"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T21:33:54.084704" elapsed="2.244998"/>
+</kw>
+<status status="PASS" start="2025-11-03T21:33:53.994629" elapsed="2.335073"/>
+</kw>
+<doc>Tenta logar com email inválido</doc>
+<status status="PASS" start="2025-11-03T21:33:50.369369" elapsed="5.960333"/>
+</test>
+<test id="s1-t3" name="CT3 - Autocomplete no campo de endereço" line="19">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:56.332040" level="INFO">Opening browser 'chrome' to base url 'http://localhost/FuelWise/pages/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:33:56.332040" elapsed="2.045604"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T21:33:58.381213" elapsed="0.047472"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2025-11-03T21:33:56.329702" elapsed="2.101347"/>
+</kw>
+<kw name="Preencher campos login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:58.433078" level="INFO">Typing text 'lucas1@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:58.431049" elapsed="0.189728"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:58.620777" level="INFO">Typing text '123123123$' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:58.620777" elapsed="0.123686"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:33:58.749375" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:33:58.749375" elapsed="0.326947"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:00.077802" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:33:59.076322" elapsed="1.001480"/>
+</kw>
+<arg>${EMAIL_GERENTE}</arg>
+<arg>${SENHA_GERENTE}</arg>
+<status status="PASS" start="2025-11-03T21:33:58.431049" elapsed="1.646753"/>
+</kw>
+<kw name="Preencher endereço valido" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:00.077802" level="INFO">Opening url 'http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1'</msg>
+<arg>${URL_VIAGENS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:34:00.077802" elapsed="0.241098"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:00.324625" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:00.324625" elapsed="0.203945"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Coordenadas do destino</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-03T21:34:00.528570" elapsed="0.023631"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:00.552201" level="INFO">Typing text 'Avenida Paulista, São Paulo, SP, Brasil' into text field 'id=enderecoOrigem'.</msg>
+<arg>id=enderecoOrigem</arg>
+<arg>${ENDERECO_VALIDO_ORIGEM}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:00.552201" elapsed="0.214814"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:01.767471" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:00.767015" elapsed="1.000456"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:01.767471" level="INFO">Typing text '1' into text field 'id:carga'.</msg>
+<arg>id:carga</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:01.767471" elapsed="0.105422"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:06.875205" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:01.872893" elapsed="5.002312"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:06.875205" level="INFO">Typing text 'Rua Joquei clube' into text field 'id=enderecoDestino'.</msg>
+<arg>id=enderecoDestino</arg>
+<arg>${ENDERECO_VALIDO_DESTINO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:06.875205" elapsed="0.202384"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:08.077994" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:07.077589" elapsed="1.000405"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:08.077994" level="INFO">Typing text 'None' into text field 'id:obs'.</msg>
+<arg>id:obs</arg>
+<arg>None</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:08.077994" elapsed="0.190121"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:13.268452" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:08.268115" elapsed="5.000337"/>
+</kw>
+<arg>${ENDERECO_VALIDO_ORIGEM}</arg>
+<arg>${ENDERECO_VALIDO_DESTINO}</arg>
+<status status="PASS" start="2025-11-03T21:34:00.077802" elapsed="13.190650"/>
+</kw>
+<kw name="Observar resultado autocomplete" owner="keywords">
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:13.462259" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-03T21:34:13.463132" level="FAIL">Text field 'id=coordenadasOrigem' should have contained text '.' but it contained ''.</msg>
+<arg>id=coordenadasOrigem</arg>
+<arg>.</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2025-11-03T21:34:13.268452" elapsed="0.196192">Text field 'id=coordenadasOrigem' should have contained text '.' but it contained ''.</status>
+</kw>
+<kw name="Textfield Should Contain" owner="SeleniumLibrary">
+<arg>id=coordenadasDestino</arg>
+<arg>.</arg>
+<doc>Verifies text field ``locator`` contains text ``expected``.</doc>
+<status status="NOT RUN" start="2025-11-03T21:34:13.464644" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-11-03T21:34:13.268452" elapsed="0.200579">Text field 'id=coordenadasOrigem' should have contained text '.' but it contained ''.</status>
+</kw>
+<kw name="Fechar o navegador" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:13.596487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-03T21:34:13.472616" elapsed="0.123871"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T21:34:13.596487" elapsed="2.289995"/>
+</kw>
+<status status="PASS" start="2025-11-03T21:34:13.470593" elapsed="2.415889"/>
+</kw>
+<doc>Teste de autocomplete no campo de endereço durante cadastro de viagem</doc>
+<status status="FAIL" start="2025-11-03T21:33:56.329702" elapsed="19.556780">Text field 'id=coordenadasOrigem' should have contained text '.' but it contained ''.</status>
+</test>
+<test id="s1-t4" name="CT4 - Cadastro de viagem sem funcionarios disponiveis" line="25">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:15.886482" level="INFO">Opening browser 'chrome' to base url 'http://localhost/FuelWise/pages/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:34:15.886482" elapsed="2.248185"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T21:34:18.134667" elapsed="0.030078"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2025-11-03T21:34:15.886482" elapsed="2.278263"/>
+</kw>
+<kw name="Preencher campos login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:18.164745" level="INFO">Typing text 'lucas1@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:18.164745" elapsed="0.348843"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:18.514597" level="INFO">Typing text '123123123$' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:18.513588" elapsed="0.100921"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:18.621426" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:18.621426" elapsed="0.242959"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:19.870483" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:18.864385" elapsed="1.006098"/>
+</kw>
+<arg>${EMAIL_GERENTE}</arg>
+<arg>${SENHA_GERENTE}</arg>
+<status status="PASS" start="2025-11-03T21:34:18.164745" elapsed="1.705738"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:19.870483" level="INFO">Opening url 'http://localhost/FuelWise/pages/gerente/viagens.php?idtransportadora=1'</msg>
+<arg>${URL_VIAGENS}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:34:19.870483" elapsed="0.235975"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:20.106458" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:20.106458" elapsed="0.233541"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Nenhum motorista encontrado</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-03T21:34:20.339999" elapsed="0.020538"/>
+</kw>
+<kw name="Fechar o navegador" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:20.457352" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-03T21:34:20.360537" elapsed="0.096815"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T21:34:20.457352" elapsed="2.312146"/>
+</kw>
+<status status="PASS" start="2025-11-03T21:34:20.360537" elapsed="2.408961"/>
+</kw>
+<doc>Teste de cadastro de viagem sem funcionarios disponiveis</doc>
+<status status="PASS" start="2025-11-03T21:34:15.886482" elapsed="6.883016"/>
+</test>
+<test id="s1-t5" name="CT5 - Cadastro funcionario" line="32">
+<kw name="Abrir o navegador" owner="keywords" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:22.769498" level="INFO">Opening browser 'chrome' to base url 'http://localhost/FuelWise/pages/login.php'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:34:22.769498" elapsed="2.071520"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-03T21:34:24.841018" elapsed="0.043744"/>
+</kw>
+<arg>${URL_LOGIN}</arg>
+<status status="PASS" start="2025-11-03T21:34:22.769498" elapsed="2.115264"/>
+</kw>
+<kw name="Preencher campos login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:24.890770" level="INFO">Typing text 'lucas1@gmail.com' into text field 'id=email'.</msg>
+<arg>id=email</arg>
+<arg>${EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:24.890770" elapsed="0.299238"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:25.190008" level="INFO">Typing text '123123123$' into text field 'id=senha'.</msg>
+<arg>id=senha</arg>
+<arg>${SENHA}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:25.190008" elapsed="0.106936"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:25.296944" level="INFO">Clicking button 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:25.296944" elapsed="0.271077"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:26.575270" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:25.568021" elapsed="1.007249"/>
+</kw>
+<arg>${EMAIL_GERENTE}</arg>
+<arg>${SENHA_GERENTE}</arg>
+<status status="PASS" start="2025-11-03T21:34:24.888744" elapsed="1.686526"/>
+</kw>
+<kw name="Cadastrar novo funcionario" owner="keywords">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:26.575270" level="INFO">Opening url 'http://localhost/FuelWise/pages/gerente/integrantes.php?idtransportadora=1'</msg>
+<arg>${URL_INTEGRANTES}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-11-03T21:34:26.575270" elapsed="0.099869"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>css=.btn.primary</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-11-03T21:34:26.675139" elapsed="0.059355"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:26.734494" level="INFO">Clicking element 'css=.btn.primary'.</msg>
+<arg>css=.btn.primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:26.734494" elapsed="0.140067"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:26.874561" level="INFO">Typing text 'João Silva' into text field 'id:nome_usuario'.</msg>
+<arg>id:nome_usuario</arg>
+<arg>${NOME_FUNCIONARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:26.874561" elapsed="0.130277"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:27.004838" level="INFO">Typing text 'joao@gmail.com' into text field 'id:email'.</msg>
+<arg>id:email</arg>
+<arg>${EMAIL_FUNCIONARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.004838" elapsed="0.144426"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:27.149264" level="INFO">Typing text '123123123$' into text field 'id:senha'.</msg>
+<arg>id:senha</arg>
+<arg>${SENHA_FUNCIONARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.149264" elapsed="0.181146"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:27.332922" level="INFO">Typing text '11999999999' into text field 'id:telefone_usuario'.</msg>
+<arg>id:telefone_usuario</arg>
+<arg>${TELEFONE_FUNCIONARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.332922" elapsed="0.176658"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:27.509580" level="INFO">Typing text '24306851087' into text field 'id:cpf'.</msg>
+<arg>id:cpf</arg>
+<arg>${CPF_FUNCIONARIO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.509580" elapsed="0.116229"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:27.625809" level="INFO">Clicking element 'css=[type='submit']'.</msg>
+<arg>css=[type='submit']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.625809" elapsed="0.365259"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-03T21:34:28.991732" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-03T21:34:27.991068" elapsed="1.000664"/>
+</kw>
+<arg>${NOME_FUNCIONARIO}</arg>
+<arg>${EMAIL_FUNCIONARIO}</arg>
+<arg>${SENHA_FUNCIONARIO}</arg>
+<arg>${TELEFONE_FUNCIONARIO}</arg>
+<arg>${CPF_FUNCIONARIO}</arg>
+<status status="PASS" start="2025-11-03T21:34:26.575270" elapsed="2.417687"/>
+</kw>
+<kw name="Observar resultado" owner="keywords">
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>${RESULTADO}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2025-11-03T21:34:28.994766" elapsed="0.044651"/>
+</kw>
+<arg>${RESULTADO_CADASTRO_FUNCIONARIO}</arg>
+<status status="PASS" start="2025-11-03T21:34:28.994766" elapsed="0.044651"/>
+</kw>
+<kw name="Fechar o navegador" owner="keywords" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2025-11-03T21:34:29.175248" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2025-11-03T21:34:29.039417" elapsed="0.135831"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-03T21:34:29.175248" elapsed="2.285804"/>
+</kw>
+<status status="PASS" start="2025-11-03T21:34:29.039417" elapsed="2.421635"/>
+</kw>
+<doc>Teste de cadastro de funcionário</doc>
+<status status="PASS" start="2025-11-03T21:34:22.769498" elapsed="8.691554"/>
+</test>
+<status status="FAIL" start="2025-11-03T21:33:43.784645" elapsed="47.679932"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Suite Testes" id="s1" pass="4" fail="1" skip="0">Suite Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

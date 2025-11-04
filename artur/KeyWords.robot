@@ -8,23 +8,15 @@ Abrir Pagina Home FuelWise
     Maximize Browser Window
     Capture Page Screenshot    prints/pagina_home_aberta.png
 
-Abrir Pagina Integrantes
-    Open Browser    ${URL_VIAGENS}    chrome
-    Maximize Browser Window
-    Capture Page Screenshot    prints/pagina_integrantes.png
-
 Abrir Pagina Veiculos
     Go To    ${URL_VEICULOS}    
-    Maximize Browser Window
     Capture Page Screenshot    prints/pagina_veiculos.png
 
 Abrir Pagina Solicitacao
-    Go TO    ${URL_SOLICITACAO}
-    Maximize Browser Window
+    Go To    ${URL_SOLICITACAO}
     Capture Page Screenshot    prints/pagina_solitacao.png
 Abrir Pagina Viagem
     Go To    ${URL_VIAGENS}
-    Maximize Browser Window
     Capture Page Screenshot    prints/pagina_solitacao.png
 
 Fazer Login
@@ -141,3 +133,15 @@ Realizar o cadastro
     Wait Until Element Is Visible    xpath=//button[text()='Continuar para Informações Pessoais']
     Scroll Element Into View    xpath=//button[text()='Continuar para Informações Pessoais']
     Click Element    xpath=//button[text()='Continuar para Informações Pessoais']
+
+
+Cadastrar motorista para viagem
+    Go To    http://localhost/fuelwise/pages/gerente/integrantes.php?idtransportadora=1
+    Click Element    css=.btn.primary
+    Input Text    id:nome_usuario       João
+    Input Text    id:email       joao@gmail.com
+    Input Text    id:telefone_usuario      11987654321
+    Input Text    id:cpf       95385494062
+    Input Text    id:senha       123123213$
+    Click Element     xpath=//button[text()='Salvar']
+    Capture Page Screenshot    prints/cadastro_motorista.png

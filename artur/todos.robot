@@ -8,6 +8,16 @@ Cadastro vazio
     Verificar Texto de Campo Obrigatorio
     Fechar o navegador  
 
+Aprovar Solicitacao
+    Abrir Pagina Home FuelWise
+    Go To   http://localhost/FuelWise/pages/adm/admRole.php
+    Abrir Pagina Solicitacao
+    Clicar Aprovar
+    Verificar Aprovar
+    Clicar Sim
+    Verificar Texto de Campo Obrigatorio Solicitacao
+    Fechar o navegador
+
 Cadastro Veiculo Invalido
     Abrir Pagina Home FuelWise
     Fazer Login
@@ -29,18 +39,9 @@ Cadastro Veiculo
 Cadastro Viagem
     Abrir Pagina Home FuelWise
     Fazer Login
+    Cadastrar motorista para viagem
     Abrir Pagina Viagem
     Preencher Infos Viagem
     Clicar Salvar
     Verificar viagem
-    Fechar o navegador
-
-Aprovar Solicitacao
-    Abrir Pagina Home FuelWise
-    Go To   http://localhost/FuelWise/pages/adm/admRole.php
-    Abrir Pagina Solicitacao
-    Clicar Aprovar
-    Verificar Aprovar
-    Clicar Sim
-    Verificar Texto de Campo Obrigatorio Solicitacao
     Fechar o navegador

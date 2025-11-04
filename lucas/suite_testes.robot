@@ -1,9 +1,7 @@
 *** Settings ***
 Library     SeleniumLibrary
 Resource    vars.robot
-Resource    login_branco.robot
-Resource    cadastro_funcionario.robot
-Resource    autocomplete_endereco.robot
+Resource    keywords.robot
 Test Teardown    Fechar o navegador
 Test Setup    Abrir o navegador    ${URL_LOGIN}
 
